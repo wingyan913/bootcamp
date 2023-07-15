@@ -12,7 +12,6 @@ public class JavaQuest4 {
     int count = 0;
     for (int i = 0; i < 100; i++) {// You cannot change this line
       if (i > 0 && i % 3 == 0 && i % 2 == 0) {
-
         System.out.print(i + " ");
         count++;
         if (count == 10) {
