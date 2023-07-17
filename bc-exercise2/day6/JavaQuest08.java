@@ -1,7 +1,7 @@
 /**
  * Example Output Second Max = 230
  */
-public class JavaQuest8 {
+public class JavaQuest08 {
   // Write a loop to find the second max number.
   public static void main(String[] args) {
     int[] nums = new int[] {-10, 5, 100, 240, 230, 80}; // Second Max = 230
@@ -10,19 +10,14 @@ public class JavaQuest8 {
     int[] nums4 = new int[] {-10, 5, 100, 240, 240, 80}; // Second Max = 240
 
     // Your program should be able to handle all the above test case.
-    int max = 0;
-    int secondMax = 0;
-    int place = 0;
+    int max = -99999;
+    int secondMax = -99999;
     // code here
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] > max) {
+        secondMax = max;
         max = nums[i];
-        place = i; // max number's place
-      }
-    }
-    nums[place] = 0;
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] > secondMax) {
+      } else if (nums[i] > secondMax && nums[i] != max) {
         secondMax = nums[i];
       }
     }
