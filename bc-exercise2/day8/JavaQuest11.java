@@ -1,6 +1,5 @@
 /**
- * Input: arrivalTime = 15, delayedTime = 5
- * Output: 20 Explanation: Reach at 15+5 = 20 (20:00).
+ * Input: arrivalTime = 15, delayedTime = 5 Output: 20 Explanation: Reach at 15+5 = 20 (20:00).
  *
  */
 public class JavaQuest11 {
@@ -11,18 +10,13 @@ public class JavaQuest11 {
   // Calculate Delayed Arrival Time
   public static int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
     // code here ...
-    int sumTime = arrivalTime + delayedTime ;
-    int delayedArrivalTime = 0;
+    int sumTime = arrivalTime + delayedTime;
     if (sumTime < 24) {
-      delayedArrivalTime = sumTime;
+      return sumTime;
+    } else {
+      return sumTime - 24;
     }
-    if (sumTime >= 24){
-      delayedArrivalTime = 0;
-      delayedArrivalTime = sumTime - 24;
-    }
-  return delayedArrivalTime;
   }
-
   public static void main(String[] args) {
     int delayedArrivalTime1 = findDelayedArrivalTime(15, 5); // 20
     int delayedArrivalTime2 = findDelayedArrivalTime(23, 5); // 4
