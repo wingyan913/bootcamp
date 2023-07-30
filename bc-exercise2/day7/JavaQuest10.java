@@ -30,6 +30,8 @@ public class JavaQuest10 {
     int newValue = input.nextInt();
 
     System.out.println("Original Array : " + Arrays.toString(my_array));
+
+    input.close();
     // code here
     if (indexPosition < 0) {
       return;
